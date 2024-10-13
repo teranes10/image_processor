@@ -41,7 +41,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Route to upload and process images
-app.post('/upload', upload.array('images', 25), async (req, res) => {
+app.post('/upload', upload.array('images', 50), async (req, res) => {
     try {
         const files = req.files;
         const { width, quality } = req.body;
